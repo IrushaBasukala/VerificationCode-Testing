@@ -20,6 +20,7 @@ const App = () => {
       console.log("Here is verifycode", verifycode);
       if (verifycode.data.message === "success") {
         navigate("/success");
+        toast.success("success!!");
       }
     } catch (error) {
       console.log("Here is error", error);
