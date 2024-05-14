@@ -4,6 +4,7 @@ import { Request, Response } from "express";
 
 const verificationCode = async (req: Request, res: Response) => {
   const { code } = req.body;
+  console.log("code", code);
   try {
     if (code.length !== 6 || code.charAt(5) === "7" || !/^\d{6}$/.test(code)) {
       return res.status(400).json({ error: "Verification Error" });
